@@ -8,7 +8,10 @@ export default function Home() {
     <div className="bg-[#060608] px-5 min-h-screen">
       <Banner />
 
-      <CaseStudyCard/>
+      <CaseStudyCard imgSrc="/assets/img/caseImg-1.avif"/>
+      <CaseStudyCard imgSrc="/assets/img/caseImg-2.avif"/>
+      <CaseStudyCard imgSrc="/assets/img/caseImg-3.avif"/>
+      <CaseStudyCard imgSrc="/assets/img/caseImg-4.avif"/>
       {/* <WorkExperience /> */}
       {/* <Collaborate /> */}
     </div>
