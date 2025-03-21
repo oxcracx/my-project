@@ -23,11 +23,11 @@ const CaseStudyCard = ({ imgSrc, title, description }) => {
             {/* Image */}
             <div>
                 <Image
-                    width={600}
-                    height={600}
+                    width={400}
+                    height={400}
                     src={imgSrc}
                     alt={title}
-                    className="w-full h-[300px] md:h-[500px] object-cover rounded-[30px] md:rounded-[100px] shadow-md"
+                    className="w-full h-[200px] md:h-[300px] object-cover rounded-[20px] md:rounded-[100px] shadow-md"
                 />
 
                 {/* Card Content */}
