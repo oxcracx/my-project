@@ -71,8 +71,8 @@ const Navbar = () => {
         <div className="mt-4 bg-gray-800 text-white p-4 rounded-lg md:hidden">
           {/* Mobile Drawer */}
           <p className="mb-4">
-            Brand & Product Designer <br />
-            based in Lagos Nigeria
+            Developer & Security analyst <br />
+            based in <span className="text-white">India.</span>
           </p>
 
           {/* Switch */}
