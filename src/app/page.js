@@ -1,19 +1,17 @@
 import Banner from "@/components/home-page/Banner";
 import CaseStudyCard from "@/components/home-page/CaseStudyCard";
-// import Collaborate from "@/components/home-page/Collaborate";
-// import WorkExperience from "@/components/home-page/WorkExperience";
 
 export default function Home() {
   return (
-    <div className="bg-[#060608] px-5 min-h-screen">
+    <div className="bg-[#060608] px-5 h-full">
       <Banner />
-    
-      <CaseStudyCard imgSrc="/assets/img/caseImg-1.avif"/>
-      <CaseStudyCard imgSrc="/assets/img/caseImg-2.avif"/>
-      <CaseStudyCard imgSrc="/assets/img/caseImg-3.avif"/>
-      <CaseStudyCard imgSrc="/assets/img/caseImg-4.avif"/>
-      {/* <WorkExperience /> */}
-      {/* <Collaborate /> */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-4">
+        <CaseStudyCard imgSrc="/assets/img/caseImg-1.avif" />
+        <CaseStudyCard imgSrc="/assets/img/caseImg-2.avif" />
+        <CaseStudyCard imgSrc="/assets/img/caseImg-3.avif" />
+        <CaseStudyCard imgSrc="/assets/img/caseImg-4.avif" />
+      </div>
     </div>
   );
 }
