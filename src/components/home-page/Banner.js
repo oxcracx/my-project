@@ -1,5 +1,4 @@
 import React from 'react'
-import BannerIcon from './BannerIcon'
 import Link from 'next/link'
 
 const Banner = () => {
@@ -28,7 +27,7 @@ const Banner = () => {
                 </div>
 
                 {/* Logo animation */}
-                <BannerIcon />
+                
             </div>
         </div>
     )

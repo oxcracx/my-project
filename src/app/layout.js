@@ -20,9 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen overflow-x-hidden`}
-      >
+        <body className="font-sans min-h-screen">
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <footer className="text-center text-white py-4">footer</footer>
