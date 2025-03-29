@@ -1,10 +1,18 @@
+import Shooting  from "@/components/ui/shooting-stars";
+import Stars  from "@/components/ui/stars-background";
 import Banner from "@/components/home-page/Banner";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-[#060608] px-5 h-full">
-      <Banner />
+    <main className="bg-[#060608] px-5 min-h-screen relative">
+      {/* Background Effects */}
+      <Stars />
+      <Shooting />
 
-      </div>
+      {/* Main Content */}
+      <Banner />
+      <Footer />
+    </main>
   );
 }

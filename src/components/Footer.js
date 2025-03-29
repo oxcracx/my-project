@@ -1,60 +1,47 @@
 import React from "react";
-import { FiArrowRight } from "react-icons/fi"; // Importing arrow icon
-
+import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const Footer = () => {
-  return (
-    <footer className="bg-[#060608] text-white ">
-      <div className="max-w-screen-xl mx-auto py-12 px-5" >
-        {/* Top Section */}
-        <div className="flex flex-wrap flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-6">
-          {/* Social Links */}
-          <div className="flex flex-wrap md:space-x-6 gap-4 text-gray-400 text-sm font-medium">
-            <a href="#" className="hover:text-white text-lg   ">
-              Behance
-            </a>
-            <a href="#" className="hover:text-white text-lg  ">
-              Linkedin
-            </a>
-            <a  href="#" className="hover:text-white text-lg ">
-              Email
-            </a>
-            <a href="#" className="hover:text-white text-lg ">
-              X
-            </a>
-            <a href="#" className="hover:text-white text-lg ">
-              Dribbble
-            </a>
-          </div>
+  return React.createElement(
+    "footer",
+    { className: "bg-[#060608] text-[#86868D] py-6 px-5 mt-10" },
+    React.createElement(
+      "div",
+      {
+        className:
+          "max-w-screen-xl mx-auto flex flex-col items-center text-center md:flex-row md:justify-between md:text-left",
+      },
 
-          {/* Contact Form */}
-          <div className="flex items-center mt-4 md:mt-0">
-            <input
-              type="text"
-              placeholder="Get in Touch"
-              className="bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none w-64 md:w-80"
-            />
-            <button className="ml-2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full">
-              <FiArrowRight className="text-white" />
-            </button>
-          </div>
-        </div>
+      // Name and Copyright
+      React.createElement(
+        "div",
+        { className: "text-lg font-semibold" },
+        `© ${new Date().getFullYear()} Mazin Khan`
+      ),
 
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center mt-4 text-gray-500 text-sm">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-0.5 bg-white"></div>
-            <span className="text-lg font-semibold">BADEJO</span>
-          </div>
-
-          {/* Copyright */}
-          <div className="mt-4 md:mt-0 text-center md:text-right">
-            <span>© Peace Badejo 2024</span>
-          </div>
-        </div>
-      </div>
-    </footer>
+      // Social Media Links
+      React.createElement(
+        "div",
+        { className: "flex space-x-6 mt-4 md:mt-0" },
+        [
+          { icon: FiGithub, url: "https://github.com/oxcracx" },
+          { icon: FiLinkedin, url: "https://www.linkedin.com/in/mazen-khan/" },
+          { icon: FiTwitter, url: "https://twitter.com" },
+        ].map((social, index) =>
+          React.createElement(
+            "a",
+            {
+              key: index,
+              href: social.url,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "text-xl hover:text-white transition-all duration-200",
+            },
+            React.createElement(social.icon, {})
+          )
+        )
+      )
+    )
   );
 };
 
